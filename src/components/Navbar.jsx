@@ -14,7 +14,7 @@ const Navbar = () => {
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}>
-            <a href='#home' className='brand'>Ayanfeoluwa<span>.</span></a>
+            <a href='#home' className='brand'>Ayanfeoluwa Micheal<span>.</span></a>
             <div className='nav-links'>{navLinks.map((link) =>
                 <a key={link.name} href={link.href} className='nav-link'>{link.name}</a>
             )}
