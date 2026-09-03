@@ -1,0 +1,99 @@
+.contact-panel {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    align-items: start;
+    gap: 90px;
+}
+
+.contact-intro .body-copy {
+    max-width: 360px;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    max-width: 620px;
+}
+
+.contact-form label {
+    color: var(--muted);
+    font: 10px 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    background: #202524;
+    color: var(--paper);
+    padding: 14px;
+    font: 13px 'Manrope', sans-serif;
+    outline: 0;
+}
+
+.contact-form input {
+    margin-bottom: 14px;
+}
+
+.contact-form label:nth-of-type(3),
+.contact-form textarea,
+.contact-form button {
+    grid-column: 1 / -1;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--acid);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #68716d;
+}
+
+.contact-form button {
+    border: 0;
+    cursor: pointer;
+}
+
+.contact-direct-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--muted);
+    font: 11px 'DM Mono', monospace;
+}
+
+.contact-direct-email:hover {
+    color: var(--acid);
+}
+
+@media (max-width: 760px) {
+    .contact-panel {
+        display: block;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+        margin-top: 42px;
+    }
+
+    .contact-form label:nth-of-type(3),
+    .contact-form textarea,
+    .contact-form button {
+        grid-column: 1;
+    }
+
+    .contact-form input {
+        margin-bottom: 10px;
+    }
+}

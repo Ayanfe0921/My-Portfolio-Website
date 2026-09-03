@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Skills from './components/Skills'
+import './contact.css'
 
 const projects = [
     { number: '01', title: 'Premium agency-grade landing page', type: 'Product interface', description: 'A practical front-end premium agency-grade landing page designed for modern SaaS products.', tags: ['React', 'UI systems', 'Responsive'], image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85', link: 'https://github.com/Ayanfe0921/a-premium-agency-grade-landing-page-for-a-modern-saas-product.git' },
@@ -95,16 +96,28 @@ const App = () => {
                     Start a conversation
                 </div>
                 <div className='contact-panel'>
-                    <div>
+                    <div className='contact-intro'>
                         <p className='eyebrow'>Have a good idea?
                         </p>
                         <h2>Let’s make it<br /><em>useful.</em></h2>
+                        <p className='body-copy'>Tell me a little about what you are building, what is getting in the way, and where you want to go next.</p>
                     </div>
-                    <a className='contact-email'
-                        href='https://ayanfeoluwaolababatunde@gmail.com'>
-                        <Mail size={18} />
-                        ayanfeoluwaolababatunde@gmail.com <ArrowUpRight size={18} />
-                    </a>
+                    <form className='contact-form'
+                        action='https://formsubmit.co/ayanfeoluwaolababatunde@gmail.com'
+                        method='POST'>
+                        <input type='hidden' name='_subject' value='New portfolio message' />
+                        <input type='hidden' name='_template' value='table' />
+                        <input type='hidden' name='_captcha' value='false' />
+                        <input type='hidden' name='_next' value={`${window.location.origin}/#contact`} />
+                        <label htmlFor='name'>Your name</label>
+                        <input id='name' name='name' type='text' placeholder='Jane Smith' required />
+                        <label htmlFor='email'>Email address</label>
+                        <input id='email' name='_replyto' type='email' placeholder='jane@company.com' required />
+                        <label htmlFor='message'>Your message</label>
+                        <textarea id='message' name='message' rows='5' placeholder='Tell me about your project...' required />
+                        <button className='button button-primary' type='submit'>Send message <Mail size={17} /></button>
+                        <a className='contact-direct-email' href='mailto:ayanfeoluwaolababatunde@gmail.com'>Or email directly <ArrowUpRight size={15} /></a>
+                    </form>
                 </div>
                 <div className='footer-row'>
                     <span>© 2026 Ayanfeoluwa</span>
