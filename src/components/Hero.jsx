@@ -9,7 +9,7 @@ const Hero = () => <section id='home' className='hero page-width'>
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}>
         <p className='eyebrow'>Full-stack developer <span className='status-dot' /> Based in Nigeria</p>
-        <h1>Thoughtful code.<br /><em>Useful</em> digital worlds.</h1>
+        <h1>Thoughtful code.<br /><em>Useful</em> digital world.</h1>
         <p className='hero-intro'>Hi, I’m Ayanfeoluwa. I build expressive, dependable products at the intersection of frontend craft, backend logic, and emerging AI.</p>
         <div className='hero-actions'>
             <a className='button button-primary' href='#work'>See my work <ArrowUpRight size={17} />
