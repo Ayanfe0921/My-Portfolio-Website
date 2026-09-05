@@ -109,16 +109,31 @@ const App = () => {
                         <input type='hidden' name='_template' value='table' />
                         <input type='hidden' name='_captcha' value='false' />
                         <input type='hidden' name='_next' value={`${window.location.origin}/#contact`} />
-                        <label htmlFor='name'>Your name</label>
-                        <input id='name' name='name' type='text' placeholder='Jane Smith' required />
-                        <label htmlFor='email'>Email address</label>
-                        <input id='email' name='_replyto' type='email' placeholder='jane@company.com' required />
-                         <label htmlFor="number">Phone number</label>
-                        <input id='number' name='number' type='text' placeholder='+234 000 000 0000' required />
-                        <label htmlFor='message'>Your message</label>
-                        <textarea id='message' name='message' rows='5' placeholder='Tell me about your project...' required />
-                        <button className='button button-primary' type='submit'>Send message <Mail size={17} /></button>
-                        <a className='contact-direct-email' href='mailto:ayanfeoluwaolababatunde@gmail.com'>Or email directly <ArrowUpRight size={15} /></a>
+
+                        <div className='field'>
+                            <label htmlFor='name'>Your name</label>
+                            <input id='name' name='name' type='text' placeholder='Jane Smith' required />
+                        </div>
+
+                        <div className='field'>
+                            <label htmlFor='email'>Email address</label>
+                            <input id='email' name='_replyto' type='email' placeholder='jane@company.com' required />
+                        </div>
+
+                        <div className='field'>
+                            <label htmlFor='number'>Phone number</label>
+                            <input id='number' name='number' type='text' placeholder='+234 000 000 0000' required />
+                        </div>
+
+                        <div className='field message-field'>
+                            <label htmlFor='message'>Your message</label>
+                            <textarea id='message' name='message' rows='5' placeholder='Tell me about your project...' required />
+                        </div>
+
+                        <div className='submit-row'>
+                            <button className='button button-primary' type='submit'>Send message <Mail size={17} /></button>
+                            <a className='contact-direct-email' href='mailto:ayanfeoluwaolababatunde@gmail.com'>Or email directly <ArrowUpRight size={15} /></a>
+                        </div>
                     </form>
                 </div>
                 <div className='footer-row'>
