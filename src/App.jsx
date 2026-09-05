@@ -112,6 +112,8 @@ const App = () => {
                         <label htmlFor='name'>Your name</label>
                         <input id='name' name='name' type='text' placeholder='Jane Smith' required />
                         <label htmlFor='email'>Email address</label>
+                        <input id='number' name='number' type='text' placeholder='+234 000 000 0000' required />
+                        <label htmlFor="number">Phone number</label>
                         <input id='email' name='_replyto' type='email' placeholder='jane@company.com' required />
                         <label htmlFor='message'>Your message</label>
                         <textarea id='message' name='message' rows='5' placeholder='Tell me about your project...' required />
