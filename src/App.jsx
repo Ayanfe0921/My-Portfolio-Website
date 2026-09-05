@@ -97,11 +97,11 @@ const App = () => {
                 </div>
                 <div className='contact-panel'>
                     <div className='contact-intro'>
-                        <p className='eyebrow'>Have a good idea?
-                        </p>
+                        <p className='eyebrow'>Have a good idea?</p>
                         <h2>Let’s make it<br /><em>useful.</em></h2>
                         <p className='body-copy'>Tell me a little about what you are building, what is getting in the way, and where you want to go next.</p>
                     </div>
+
                     <form className='contact-form'
                         action='https://formsubmit.co/ayanfeoluwaolababatunde@gmail.com'
                         method='POST'>
@@ -110,32 +110,30 @@ const App = () => {
                         <input type='hidden' name='_captcha' value='false' />
                         <input type='hidden' name='_next' value={`${window.location.origin}/#contact`} />
 
-                        <div className='field'>
+                        <div className='field-group'>
                             <label htmlFor='name'>Your name</label>
                             <input id='name' name='name' type='text' placeholder='Jane Smith' required />
                         </div>
 
-                        <div className='field'>
+                        <div className='field-group'>
                             <label htmlFor='email'>Email address</label>
                             <input id='email' name='_replyto' type='email' placeholder='jane@company.com' required />
                         </div>
 
-                        <div className='field'>
+                        <div className='field-group'>
                             <label htmlFor='number'>Phone number</label>
                             <input id='number' name='number' type='text' placeholder='+234 000 000 0000' required />
                         </div>
 
-                        <div className='field message-field'>
+                        <div className='field-group message-group'>
                             <label htmlFor='message'>Your message</label>
                             <textarea id='message' name='message' rows='5' placeholder='Tell me about your project...' required />
                         </div>
 
-                        <div className='submit-row'>
-                            <button className='button button-primary' type='submit'>Send message <Mail size={17} /></button>
-                            <a className='contact-direct-email' href='mailto:ayanfeoluwaolababatunde@gmail.com'>Or email directly <ArrowUpRight size={15} /></a>
-                        </div>
+                        <button className='button button-primary' type='submit'>Send message <Mail size={17} /></button>
                     </form>
                 </div>
+
                 <div className='footer-row'>
                     <span>© 2026 Ayanfeoluwa</span>
                     <span><MapPin size={14} /> Available for thoughtful collaborations</span>
